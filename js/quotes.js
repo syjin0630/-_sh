@@ -5,8 +5,9 @@ const quotes = [
     author: "RM",
   },
   {
-    quote: "니 멋대로 살어 어차피 니 거야 애쓰지 좀 말어 져도 괜찮아",
-    author: "BTS",
+    quote:
+      "지금 적극적으로 실행되는 괜찮은 계획이 다음 주의 완벽한 계획보다 낫다.",
+    author: "George S. Patton",
   },
   {
     quote:
@@ -18,8 +19,9 @@ const quotes = [
     author: "V",
   },
   {
-    quote: "멈춰서도 괜찮아 아무 이유도 모르는 채 달릴 필요 없어",
-    author: "BTS, 낙원",
+    quote:
+      "다른 누군가가 되어서 사랑받기보다는 있는 그대로의 나로서 미움받는 것이 낫다.",
+    author: "Kurt Cobain",
   },
   {
     quote: "오랫동안 꿈을 그리는 사람은 마침내 그 꿈을 닮아 간다",
@@ -42,8 +44,9 @@ const quotes = [
     author: "동아프리카속담",
   },
   {
-    quote: "I do believe in fairies, I do, I do",
-    author: "Peter Pan",
+    quote:
+      "자신의 부족한 점을 더 많이 부끄러워할 줄 아는 이는 더 존경받을 가치가 있는 사람이다.",
+    author: "George Bernard Shaw",
   },
 ];
 
