@@ -4,36 +4,47 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chrome App</title>
+    <title>Web Todo</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/TodoLogo1.png" />
   </head>
   <body>
-    <h2 id="clock">00:00:00</h2>
+    <div id="memopad">
+      <div class="hidden" id="weather">
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <h2 class="hidden" id="clock">00:00:00</h2>
     <form class="hidden" id="login-form">
       <input
+        class="hidden"
         required
         maxlength="15"
         type="text"
         placeholder="What is your name?"
       />
-      <button>Log In</button>
+      <button class="hidden">Log In</button>
     </form>
     <h1 id="greeting" class="hidden"></h1>
-    <form id="todo-form">
-      <input type="text" placeholder="Write a ToDo and Press Enter" required />
+    <form id="search">
+      <input type="text" placeholder="search" />
+    </form>
+    <form class="hidden" id="todo-form">
+      <input type="text" placeholder="Write and Enter" required />
     </form>
     <ul id="todo-list"></ul>
+
     <div id="quote">
       <span></span>
       <span></span>
     </div>
-    <div id="weather">
-      <span></span>
-      <span></span>
-    </div>
+
     <script src="js/background.js"></script>
-    <script src="js/clock.js"></script>
     <script src="js/greetings.js"></script>
+    <script src="js/search.js"></script>
+
+    <script src="js/clock.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/quotes.js"></script>
