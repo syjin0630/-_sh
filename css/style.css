@@ -1,6 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&family=Roboto+Slab&display=swap");
+body {
+  font-family: "Kaisei HarunoUmi", serif;
+}
 .hidden {
   display: none;
 }
+
 #bgimg {
-  object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  object-fit: fill;
+  overflow: hidden;
+  z-index: -5;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+#clock {
+  z-index: 2;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+}
+#date {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+#login-form {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+#login-form input,
+#todo-form input,
+#search input,
+#bookmark input {
+  z-index: 2;
+  border-left: none;
+  border-right: none;
+  border-color: goldenrod;
+  font-family: "Kaisei HarunoUmi", serif;
+  background: none;
+}
+#bookmark {
+  display: flex;
+  flex-direction: column;
+}
+#bookmark input {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  height: 20px;
+}
+#bookmarkBtn {
+  width: 25px;
+  color: goldenrod;
+  margin-top: 5px;
+}
+#login-form button {
+  font-family: "Kaisei HarunoUmi", serif;
+  background-color: goldenrod;
+}
+h1 {
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+}
+
+#todo-form,
+#todo-list {
+  position: absolute;
+  top: 280px;
+  right: 240px;
+}
+#todo-list {
+  z-index: 2;
+  overflow-y: auto;
+  height: 260px;
+  width: 170px;
+  top: 310px;
+}
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+}
+#todo-list li button {
+  border: none;
+  background: none;
+}
+
+#집게핀달린흰색,
+#집게핀달린흰색검색 {
+  position: absolute;
+  z-index: -1;
+  width: 500px;
+  display: flex;
+  right: 80px;
+  top: 130px;
+}
+#집게핀달린흰색검색 {
+  left: 80px;
+}
+#search {
+  position: absolute;
+  display: flex;
+  left: 245px;
+  top: 280px;
+}
+#bookmark {
+  position: absolute;
+  display: flex;
+  left: 210px;
+  top: 290px;
+}
+#bookmark-list {
+  position: absolute;
+  display: flex;
+  left: 200px;
+  top: 280px;
+  display: flex;
+  flex-direction: column;
+}
+
+#quote {
+  z-index: 2;
+  font-family: "Roboto Slab", serif;
+  display: flex;
+  flex-direction: column;
+}
+
+#quote span:first-child,
+#quote span:last-child {
+  display: flex;
+  justify-content: center;
+}
+
+#quote span:first-child {
+  font-weight: bolder;
+  margin-bottom: 5px;
+}
+#quote span:last-child {
+  font-weight: lighter;
+  font-size: 15px;
+}
+#weather {
+  z-index: 2;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+#greeting {
+  cursor: pointer;
 }

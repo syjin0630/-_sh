@@ -9,13 +9,14 @@
     <link rel="shortcut icon" href="img/TodoLogo1.png" />
   </head>
   <body>
-    <div id="memopad">
+    
       <div class="hidden" id="weather">
         <span></span>
         <span></span>
       </div>
     </div>
     <h2 class="hidden" id="clock">00:00:00</h2>
+    <h5 class="hidden" id="date">0000-00-00</h2>
     <form class="hidden" id="login-form">
       <input
         class="hidden"
@@ -27,9 +28,22 @@
       <button class="hidden">Log In</button>
     </form>
     <h1 id="greeting" class="hidden"></h1>
+    <img class="hidden"id="집게핀달린흰색검색" src="img/memo-집게핀 달린 흰색.jpg" />
     <form id="search">
-      <input type="text" placeholder="search" />
+      <input class="hidden" type="search" placeholder="search" />
     </form>
+   <!---<form class="hidden" id="bookmark">
+     
+        <input class ="hidden" type="url" placeholder="Write url and Enter"/>
+        <input class ="hidden" type="text" placeholder="Write title and Enter"/>
+      </form>
+      
+      <ul id="bookmark-list">
+      <svg id = "bookmarkBtn" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+
+    </ul>-->
+
+    <img class="hidden" id="집게핀달린흰색" src="img/memo-집게핀 달린 흰색.jpg" />
     <form class="hidden" id="todo-form">
       <input type="text" placeholder="Write and Enter" required />
     </form>
@@ -43,10 +57,10 @@
     <script src="js/background.js"></script>
     <script src="js/greetings.js"></script>
     <script src="js/search.js"></script>
-
     <script src="js/clock.js"></script>
     <script src="js/todo.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/quotes.js"></script>
+
   </body>
 </html>

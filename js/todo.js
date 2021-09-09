@@ -20,8 +20,10 @@ function paintTodo(newTodo) {
   li.id = newTodo.id;
   const span = document.createElement("span");
   span.innerText = newTodo.text;
+
   const btn = document.createElement("button");
-  btn.innerText = "❌";
+  btn.innerText = "✔";
+
   btn.addEventListener("click", deleteToTo);
   li.appendChild(span);
   li.appendChild(btn);
@@ -51,4 +53,8 @@ if (savedToDos !== null) {
   parsedToDos.forEach(paintTodo);
   //(item) => console.log("this is the turn of ", item)
   //윗 줄은 arrow function이라고 함. 함수를 만들 필요없이 짧게 쓸 수 있음.
+}
+
+if (savedUsername !== null) {
+  toDoForm.classList.remove(HIDDEN_CLASSNAME);
 }

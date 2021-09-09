@@ -28,7 +28,7 @@ const quotes = [
     author: "앙드레 말로",
   },
   {
-    quote: "행복은 습관이다,그것을 몸에 지니라",
+    quote: "행복은 습관이다, 그것을 몸에 지니라",
     author: "허버드",
   },
   {
@@ -36,7 +36,7 @@ const quotes = [
     author: "찰스다윈",
   },
   {
-    quote: "평생 살 것처럼 꿈을 꾸어라.그리고 내일 죽을 것처럼 오늘을 살아라",
+    quote: "평생 살 것처럼 꿈을 꾸어라. 그리고 내일 죽을 것처럼 오늘을 살아라",
     author: "제임스 딘",
   },
   {
@@ -48,12 +48,27 @@ const quotes = [
       "자신의 부족한 점을 더 많이 부끄러워할 줄 아는 이는 더 존경받을 가치가 있는 사람이다.",
     author: "George Bernard Shaw",
   },
+  {
+    quote: "만유인력은 사랑에 빠진 사람을 책임지지 않는다.",
+    author: "Albert Einstein",
+  },
+  {
+    quote:
+      "긴 하루 끝에 좋은 책이 기다리고 있다는 생각만으로 그날은 더 행복해진다.",
+    author: "Kathleen Norris",
+  },
 ];
 
 const quote = document.querySelector("#quote span:first-child");
 const author = document.querySelector("#quote span:last-child");
-
+const quoteBox = document.querySelector("#quote");
 const todaysQuote = quotes[Math.floor(Math.random() * quotes.length)];
 
 quote.innerText = todaysQuote.quote;
 author.innerText = todaysQuote.author;
+
+if (savedUsername !== null) {
+  quoteBox.classList.add("bottomQuote");
+} else {
+  quoteBox.classList.remove("bottomQuote");
+}
