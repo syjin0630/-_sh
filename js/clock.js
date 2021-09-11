@@ -9,8 +9,9 @@ function getClock() {
 
   if (hours > 12) {
     hours = String(date.getHours() - 12).padStart(2, "0");
+  } else if (hours == 0) {
+    hours = 12;
   }
-
   clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
 function getDate() {
