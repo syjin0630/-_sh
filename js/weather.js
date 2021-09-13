@@ -20,6 +20,6 @@ function onGeoError() {
 
 navigator.geolocation.getCurrentPosition(onGeoOk, onGeoError);
 
-if (savedUsername !== null) {
-  weather.classList.remove(HIDDEN_CLASSNAME);
-}
+//if (savedUsername !== null) {
+// weather.classList.remove(HIDDEN_CLASSNAME);
+//}

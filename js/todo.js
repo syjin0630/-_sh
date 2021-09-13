@@ -55,6 +55,7 @@ if (savedToDos !== null) {
   //윗 줄은 arrow function이라고 함. 함수를 만들 필요없이 짧게 쓸 수 있음.
 }
 
-if (savedUsername !== null) {
-  toDoForm.classList.remove(HIDDEN_CLASSNAME);
-}
+//if (savedUsername !== null) {
+// toDoForm.classList.remove(HIDDEN_CLASSNAME);
+// toDoList.classList.remove(HIDDEN_CLASSNAME);
+//}

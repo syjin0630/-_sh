@@ -22,7 +22,20 @@ body {
   z-index: 2;
   position: absolute;
   top: 0px;
+  display: inline-flex;
+  margin: 10px;
+  left: 0px;
+}
+#apBox {
+  display: flex;
+  position: absolute;
+  top: 0px;
   left: 20px;
+  margin-top: 13px;
+}
+#ap {
+  font-size: 13px;
+  display: flex;
 }
 #date {
   position: absolute;
@@ -38,6 +51,8 @@ body {
 #login-form input,
 #todo-form input,
 #search input,
+#google input,
+#naver input,
 #bookmark input {
   z-index: 2;
   border-left: none;
@@ -46,20 +61,7 @@ body {
   font-family: "Kaisei HarunoUmi", serif;
   background: none;
 }
-#bookmark {
-  display: flex;
-  flex-direction: column;
-}
-#bookmark input {
-  margin-top: 10px;
-  margin-bottom: 5px;
-  height: 20px;
-}
-#bookmarkBtn {
-  width: 25px;
-  color: goldenrod;
-  margin-top: 5px;
-}
+
 #login-form button {
   font-family: "Kaisei HarunoUmi", serif;
   background-color: goldenrod;
@@ -73,15 +75,15 @@ h1 {
 #todo-form,
 #todo-list {
   position: absolute;
-  top: 280px;
+  top: 290px;
   right: 240px;
 }
 #todo-list {
   z-index: 2;
   overflow-y: auto;
-  height: 260px;
+  height: 250px;
   width: 180px;
-  top: 305px;
+  top: 315px;
   right: 230px;
   scrollbar-color: goldenrod;
 }
@@ -102,7 +104,7 @@ h1 {
   width: 500px;
   display: flex;
   right: 80px;
-  top: 130px;
+  top: 140px;
 }
 #집게핀달린흰색검색 {
   left: 80px;
@@ -111,21 +113,19 @@ h1 {
   position: absolute;
   display: flex;
   left: 245px;
-  top: 280px;
-}
-#bookmark {
-  position: absolute;
-  display: flex;
-  left: 210px;
   top: 290px;
 }
-#bookmark-list {
+#google {
   position: absolute;
   display: flex;
-  left: 200px;
-  top: 280px;
+  left: 245px;
+  top: 330px;
+}
+#naver {
+  position: absolute;
   display: flex;
-  flex-direction: column;
+  left: 245px;
+  top: 370px;
 }
 
 #quote {

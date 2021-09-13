@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>plando</title>
+    <title>plan</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="shortcut icon" href="img/TodoLogo1.png" />
   </head>
   <body>
     
-      <div class="hidden" id="weather">
+      <div  id="weather">
         <span></span>
         <span></span>
       </div>
     </div>
-    <h2 class="hidden" id="clock">00:00:00</h2>
-    <h5 class="hidden" id="date">0000-00-00</h2>
+    <div id="apBox">
+      <span id="ap">AM</span>
+      <h2  id="clock">00:00:00</h2>
+    </div>
+    <h5  id="date">0000-00-00</h2>
     <form class="hidden" id="login-form">
       <input
         class="hidden"
@@ -29,23 +32,26 @@
     </form>
     <h1 id="greeting" class="hidden"></h1>
   
-    <img class="hidden"id="집게핀달린흰색검색" src="img/memo-집게핀 달린 흰색.jpg" />
+    <img id="집게핀달린흰색검색" src="img/memo-집게핀 달린 흰색.jpg" />
     <form id="search">
-      <input class="hidden" type="search" placeholder="search" />
+      <input type="search" placeholder="Open site" />
     </form>
-   <!---<form class="hidden" id="bookmark">
-     
-        <input class ="hidden" type="url" placeholder="Write url and Enter"/>
-        <input class ="hidden" type="text" placeholder="Write title and Enter"/>
-      </form>
+    <form id="google">
+      <input type="search" placeholder="Google" />
+    </form>
+    <form id="naver">
+      <input type="search" placeholder="Naver" />
+    </form>
+    
+    
       
+     
       <ul id="bookmark-list">
-      <svg id = "bookmarkBtn" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+      </ul>
 
-    </ul>-->
 
-    <img class="hidden" id="집게핀달린흰색" src="img/memo-집게핀 달린 흰색.jpg" />
-    <form class="hidden" id="todo-form">
+    <img id="집게핀달린흰색" src="img/memo-집게핀 달린 흰색.jpg" />
+    <form id="todo-form">
       <input type="text" placeholder="Write and Enter" required />
     </form>
     <ul id="todo-list"></ul>

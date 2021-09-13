@@ -1,5 +1,6 @@
 const clock = document.querySelector("h2#clock");
 const dateText = document.querySelector("h5#date");
+const ap = document.querySelector("span#ap");
 
 function getClock() {
   const date = new Date();
@@ -7,11 +8,15 @@ function getClock() {
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const seconds = String(date.getSeconds()).padStart(2, "0");
 
-  if (hours > 12) {
+  if (hours >= 12) {
     hours = String(date.getHours() - 12).padStart(2, "0");
+    ap.innerHTML = "PM";
   } else if (hours == 0) {
     hours = 12;
+  } else if (hours < 12) {
+    ap.innerHTML = "AM";
   }
+
   clock.innerText = `${hours}:${minutes}:${seconds}`;
 }
 function getDate() {
@@ -33,7 +38,7 @@ function getDate() {
     day = "FRI";
   } else if (day === 6) {
     day = "SAT";
-  } else if (day === 7) {
+  } else if (day === 0) {
     day = "SUN";
   }
 
@@ -45,7 +50,7 @@ getDate();
 setInterval(getDate, 86400000);
 setInterval(getClock, 1000); //1초마다 함수실행
 //setTimeout(sayHello, 5000); //5초후에 함수실행
-if (savedUsername !== null) {
-  clock.classList.remove(HIDDEN_CLASSNAME);
-  date.classList.remove(HIDDEN_CLASSNAME);
-}
+//if (savedUsername !== null) {
+// clock.classList.remove(HIDDEN_CLASSNAME);
+// date.classList.remove(HIDDEN_CLASSNAME);
+//}
