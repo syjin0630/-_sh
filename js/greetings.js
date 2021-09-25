@@ -16,7 +16,9 @@ function onLoginSubmit(info) {
   loginInput.classList.add(HIDDEN_CLASSNAME);
   localStorage.setItem(USERNAME_KEY, username);
   paintGreetings(username);
-  alert("이름을 클릭하면 이름을 바꿀 수 있습니다!");
+  alert(
+    "이름을 클릭하면 이름을 바꿀 수 있습니다!  (안 될 경우 새로고침을 한 번 해주세요.)"
+  );
   browser.menus.refresh();
 }
 
