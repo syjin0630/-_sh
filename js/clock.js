@@ -4,16 +4,20 @@ const ap = document.querySelector("span#ap");
 
 function getClock() {
   const date = new Date();
+  const realHours = date.getHours();
   let hours = String(date.getHours()).padStart(2, "0");
   const minutes = String(date.getMinutes()).padStart(2, "0");
   const seconds = String(date.getSeconds()).padStart(2, "0");
 
-  if (hours >= 12) {
+  if (realHours > 12) {
     hours = String(date.getHours() - 12).padStart(2, "0");
-    ap.innerHTML = "PM";
   } else if (hours == 0) {
     hours = 12;
-  } else if (hours < 12) {
+  }
+
+  if (realHours >= 12) {
+    ap.innerHTML = "PM";
+  } else {
     ap.innerHTML = "AM";
   }
 

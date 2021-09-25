@@ -39,8 +39,9 @@ body {
 }
 #date {
   position: absolute;
-  left: 20px;
+  left: 26px;
   top: 30px;
+  margin-top: 27px;
 }
 #login-form {
   display: flex;
