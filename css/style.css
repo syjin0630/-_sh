@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Kaisei+HarunoUmi:wght@700&family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+
 body {
   font-family: "Kaisei HarunoUmi", serif;
 }
@@ -53,8 +55,7 @@ body {
 #todo-form input,
 #search input,
 #google input,
-#naver input,
-#bookmark input {
+#naver input {
   z-index: 2;
   border-left: none;
   border-right: none;
@@ -83,19 +84,27 @@ h1 {
   z-index: 2;
   overflow-y: auto;
   height: 250px;
-  width: 180px;
+  width: 175px;
   top: 315px;
-  right: 230px;
-  scrollbar-color: goldenrod;
+  right: 238px;
+}
+
+#todo-list li button {
+  border: none;
+  background: none;
 }
 
 #todo-list li {
   display: flex;
   justify-content: space-between;
-}
-#todo-list li button {
-  border: none;
-  background: none;
+  align-items: center;
+  background-color: rgba(248, 178, 2, 0.151);
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 5px;
+  padding-right: 0px;
+  font-size: 15px;
+  font-family: "Nanum Gothic", sans-serif;
 }
 
 #집게핀달린흰색,
