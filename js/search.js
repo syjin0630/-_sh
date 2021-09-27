@@ -4,11 +4,8 @@ const google = document.querySelector("#google");
 const googleInput = google.querySelector("input");
 const naver = document.querySelector("#naver");
 const naverInput = naver.querySelector("input");
-//const bookmark = document.querySelector("#bookmark");
-//const bookmarkForm = document.querySelector("#bookmark form");
-//const bookmarkInput = document.querySelectorAll("#bookmark input");
-//const bookmarkList = document.getElementById("bookmark-list");
-//const bookmarkBtn = bookmarkList.querySelector("svg");
+const papago = document.querySelector("#papago");
+const papagoInput = papago.querySelector("input");
 
 const BOOKMARKS = "bookmarks";
 let bookmarks = [];
@@ -34,20 +31,15 @@ function naverFound(event) {
   const naverPerfectUrl = `https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=${naverUrl}`;
   window.open(naverPerfectUrl, "_naverUrl");
 }
-
-//function addBookmark() {
-//  const bookmarkObj = document.createElement("button");
-// bookmarkObj.class = "hidden";
-//bookmark.appendChild(bookmarkObj);
-//bookmark.insertBefore(bookmarkObj, bookmarkBtn);
-//}
+function papagoFound(event) {
+  event.preventDefault();
+  const papagoText = papagoInput.value;
+  papagoInput.value = "";
+  const papagoUrl = `https://papago.naver.com/?sk=en&tk=ko&hn=0&st=${papagoText}`;
+  window.open(papagoUrl, "Papago");
+}
 
 search.addEventListener("submit", found);
 google.addEventListener("submit", googleFound);
 naver.addEventListener("submit", naverFound);
-
-//if (savedUsername !== null) {
-//  searchInput.classList.remove(HIDDEN_CLASSNAME);
-// bookmarkInput.classList.remove(HIDDEN_CLASSNAME);
-// bookmarkButton.classList.remove(HIDDEN_CLASSNAME);
-//}
+papago.addEventListener("submit", papagoFound);

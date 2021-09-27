@@ -51,11 +51,7 @@ body {
   margin: 50px;
 }
 
-#login-form input,
-#todo-form input,
-#search input,
-#google input,
-#naver input {
+input {
   z-index: 2;
   border-left: none;
   border-right: none;
@@ -119,23 +115,22 @@ h1 {
 #집게핀달린흰색검색 {
   left: 80px;
 }
-#search {
+#search,
+#google,
+#naver,
+#papago {
   position: absolute;
-  display: flex;
   left: 245px;
   top: 290px;
 }
 #google {
-  position: absolute;
-  display: flex;
-  left: 245px;
   top: 330px;
 }
 #naver {
-  position: absolute;
-  display: flex;
-  left: 245px;
   top: 370px;
+}
+#papago {
+  top: 410px;
 }
 
 #quote {
