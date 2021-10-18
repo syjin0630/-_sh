@@ -3,6 +3,11 @@
 
 body {
   font-family: "Kaisei HarunoUmi", serif;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 10% 13% 13% 5% 45%;
+  justify-items: center;
+  height: 100vh;
 }
 .hidden {
   display: none;
@@ -19,125 +24,57 @@ body {
   width: 100vw;
   position: fixed;
 }
-
-#clock {
-  z-index: 2;
-  position: absolute;
-  top: 0px;
-  display: inline-flex;
-  margin: 10px;
-  left: 0px;
-}
 #apBox {
-  display: flex;
-  position: absolute;
-  top: 0px;
-  left: 20px;
   margin-top: 13px;
+  grid-row: 1 / span 1;
+  grid-column: 1 / span 1;
 }
 #ap {
+  position: absolute;
+  left: 20px;
+  top: 5px;
   font-size: 13px;
   display: flex;
 }
+
+#clock {
+  position: absolute;
+  top: 5px;
+  left: 10px;
+  display: inline-flex;
+  margin: 10px;
+}
 #date {
   position: absolute;
-  left: 26px;
-  top: 30px;
+  left: 18px;
+  top: 20px;
   margin-top: 27px;
+}
+#weather {
+  grid-row: 1 / span 1;
+  grid-column: -1 / -2;
+  justify-self: end;
+  margin-right: 5px;
 }
 #login-form {
   display: flex;
   justify-content: center;
   margin: 50px;
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 3;
+  height: 30px;
 }
-
-input {
-  z-index: 2;
-  border-left: none;
-  border-right: none;
-  border-color: goldenrod;
-  font-family: "Kaisei HarunoUmi", serif;
-  background: none;
+#greeting {
+  cursor: pointer;
+  grid-row: 2 / span 1;
+  grid-column: 2 / span 3;
 }
-
-#login-form button {
-  font-family: "Kaisei HarunoUmi", serif;
-  background-color: goldenrod;
-}
-h1 {
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-}
-
-#todo-form,
-#todo-list {
-  position: absolute;
-  top: 290px;
-  right: 240px;
-}
-#todo-list {
-  z-index: 2;
-  overflow-y: auto;
-  height: 250px;
-  width: 175px;
-  top: 315px;
-  right: 238px;
-}
-
-#todo-list li button {
-  border: none;
-  background: none;
-}
-
-#todo-list li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: rgba(248, 178, 2, 0.151);
-  border-radius: 5px;
-  margin-bottom: 10px;
-  padding: 5px;
-  padding-right: 0px;
-  font-size: 15px;
-  font-family: "Nanum Gothic", sans-serif;
-}
-
-#집게핀달린흰색,
-#집게핀달린흰색검색 {
-  position: absolute;
-  z-index: -1;
-  width: 500px;
-  display: flex;
-  right: 80px;
-  top: 140px;
-}
-#집게핀달린흰색검색 {
-  left: 80px;
-}
-#search,
-#google,
-#naver,
-#papago {
-  position: absolute;
-  left: 245px;
-  top: 290px;
-}
-#google {
-  top: 330px;
-}
-#naver {
-  top: 370px;
-}
-#papago {
-  top: 410px;
-}
-
 #quote {
-  z-index: 2;
   font-family: "Roboto Slab", serif;
   display: flex;
   flex-direction: column;
+  grid-row: 3 / span 1;
+  grid-column: 2 / span 3;
 }
 
 #quote span:first-child,
@@ -154,12 +91,81 @@ h1 {
   font-weight: lighter;
   font-size: 15px;
 }
-#weather {
-  z-index: 2;
-  position: absolute;
-  right: 20px;
-  top: 20px;
+
+input,
+#bookmark,
+#todo-list li {
+  border-left: none;
+  border-right: none;
+  border-color: goldenrod;
+  font-family: "Kaisei HarunoUmi", serif;
+  background: none;
 }
-#greeting {
-  cursor: pointer;
+#bookmark,
+#todo-list li {
+  background-color: rgba(218, 165, 32, 0.507);
+  border-radius: 20px;
+}
+button {
+  font-family: "Kaisei HarunoUmi", serif;
+  background-color: goldenrod;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+#todo-list {
+  overflow-y: auto;
+  height: 180px;
+  padding-left: 0px;
+}
+
+#todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Nanum Gothic", sans-serif;
+  height: 10px;
+}
+
+#todo-list li button {
+  border: none;
+  background: none;
+}
+
+#searchBox,
+#todoBox {
+  z-index: -1;
+  width: 200px;
+  height: 250px;
+  display: grid;
+  grid-template-rows: repeat(auto-fill, 30px);
+  grid-auto-rows: 30px;
+  gap: 5px;
+  box-shadow: goldenrod;
+  justify-content: center;
+  padding-top: 20px;
+}
+#searchBox {
+  grid-row: 5 / span 1;
+  grid-column: 2 / span 1;
+}
+#todoBox {
+  grid-row: 5 / span 1;
+  grid-column: 4 / span 1;
+}
+#searchBoxImg {
+  grid-row: 4 / span 2;
+  grid-column: 2 / span 1;
+  z-index: -2;
+}
+#todoBoxImg {
+  grid-row: 4 / span 2;
+  grid-column: 4 / span 1;
+  z-index: -2;
 }
