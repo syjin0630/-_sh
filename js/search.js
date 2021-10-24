@@ -4,6 +4,8 @@ const google = document.querySelector("#google");
 const googleInput = google.querySelector("input");
 const naver = document.querySelector("#naver");
 const naverInput = naver.querySelector("input");
+const youtube = document.querySelector("#youtube");
+const youtubeInput = youtube.querySelector("input");
 const papago = document.querySelector("#papago");
 const papagoInput = papago.querySelector("input");
 
@@ -31,6 +33,13 @@ function naverFound(event) {
   const naverPerfectUrl = `https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=${naverUrl}`;
   window.open(naverPerfectUrl, "_naverUrl");
 }
+function youtubeFound(event) {
+  event.preventDefault();
+  const youtubeUrl = youtubeInput.value;
+  youtubeInput.value = "";
+  const youtubePerfectUrl = `https://www.youtube.com/results?search_query=${youtubeUrl}`;
+  window.open(youtubePerfectUrl, "_youtubeUrl");
+}
 function papagoFound(event) {
   event.preventDefault();
   const papagoText = papagoInput.value;
@@ -42,4 +51,5 @@ function papagoFound(event) {
 search.addEventListener("submit", found);
 google.addEventListener("submit", googleFound);
 naver.addEventListener("submit", naverFound);
+youtube.addEventListener("submit", youtubeFound);
 papago.addEventListener("submit", papagoFound);

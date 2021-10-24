@@ -52,7 +52,7 @@ body {
 }
 #weather {
   grid-row: 1 / span 1;
-  grid-column: -1 / -2;
+  grid-column: -1 / -3;
   justify-self: end;
   margin-right: 5px;
 }
@@ -94,7 +94,7 @@ body {
 
 input,
 #bookmark,
-#todo-list li {
+li {
   border-left: none;
   border-right: none;
   border-color: goldenrod;
@@ -102,10 +102,11 @@ input,
   background: none;
 }
 #bookmark,
-#todo-list li {
+li {
   background-color: rgba(218, 165, 32, 0.507);
   border-radius: 20px;
 }
+
 button {
   font-family: "Kaisei HarunoUmi", serif;
   background-color: goldenrod;
@@ -116,13 +117,14 @@ h1 {
   justify-content: center;
 }
 
-#todo-list {
+#todo-list,
+#bookmark-list {
   overflow-y: auto;
   height: 180px;
   padding-left: 0px;
 }
 
-#todo-list li {
+li {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -133,27 +135,34 @@ h1 {
   height: 10px;
 }
 
-#todo-list li button {
+#todo-list li button,
+#bookmark-list li button {
   border: none;
   background: none;
 }
 
+a {
+  color: black;
+  text-decoration: none;
+}
+
 #searchBox,
 #todoBox {
-  z-index: -1;
   width: 200px;
   height: 250px;
   display: grid;
   grid-template-rows: repeat(auto-fill, 30px);
   grid-auto-rows: 30px;
-  gap: 5px;
   box-shadow: goldenrod;
   justify-content: center;
   padding-top: 20px;
 }
+
 #searchBox {
   grid-row: 5 / span 1;
   grid-column: 2 / span 1;
+  gap: 10px;
+  overflow-y: auto;
 }
 #todoBox {
   grid-row: 5 / span 1;
