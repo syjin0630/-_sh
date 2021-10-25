@@ -169,7 +169,6 @@ a {
 #todoBox {
   grid-row: 5 / span 1;
   grid-column: 4 / span 1;
-  justify-items: center;
 }
 #searchBoxImg {
   grid-row: 4 / span 2;
