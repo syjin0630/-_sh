@@ -119,11 +119,13 @@ h1 {
 
 #todo-list,
 #bookmark-list {
-  overflow-y: auto;
-  height: 180px;
+  height: 190px;
   padding-left: 0px;
+  width: 174px;
 }
-
+#todo-list {
+  overflow-y: auto;
+}
 li {
   display: flex;
   justify-content: space-between;
@@ -132,7 +134,7 @@ li {
   padding: 10px;
   font-size: 15px;
   font-family: "Nanum Gothic", sans-serif;
-  height: 10px;
+  height: min-content;
 }
 
 #todo-list li button,
@@ -167,6 +169,7 @@ a {
 #todoBox {
   grid-row: 5 / span 1;
   grid-column: 4 / span 1;
+  justify-items: center;
 }
 #searchBoxImg {
   grid-row: 4 / span 2;
