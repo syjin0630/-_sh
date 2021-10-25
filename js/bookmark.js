@@ -16,8 +16,11 @@ function localUrl() {
   localStorage.setItem(URL_KEY, JSON.stringify(urls));
 }
 
-function deleteUrl() {
-  /*li지우기 만드세요*/
+function deleteUrl(event) {
+  const li = event.target.parentElement;
+  li.remove();
+  urls = urls.filter((filterUrl) => filterUrl.id !== parseInt(li.id));
+  localStorage.setItem(URL_KEY, JSON.stringify(urls));
 }
 
 function paintBookmark(newUrl) {
