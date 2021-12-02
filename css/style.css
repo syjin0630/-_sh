@@ -8,6 +8,7 @@ body {
   grid-template-rows: 10% 13% 13% 5% 45%;
   justify-items: center;
   height: 100vh;
+  background-color: rgb(253, 208, 93);
 }
 .hidden {
   display: none;
