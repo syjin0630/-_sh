@@ -17,7 +17,7 @@ function found(event) {
   const searchUrl = searchInput.value;
   searchInput.value = "";
   const searchPerfectUrl = `https://${searchUrl}.com`;
-  window.open(searchPerfectUrl, "_searchUrl");
+  window.location.href = searchPerfectUrl;
 }
 function googleFound(event) {
   event.preventDefault();
