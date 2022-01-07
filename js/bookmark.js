@@ -30,7 +30,6 @@ function paintBookmark(newUrl) {
   span.innerText = newUrl.name;
   const a = document.createElement("a");
   a.href = newUrl.url;
-  // a.target = "_blank";
   const btn = document.createElement("button");
   btn.innerHTML = "×";
 
